@@ -1,8 +1,4 @@
-import {
-  FullButton,
-  BorderButtonWithX,
-  FullButtonWithV,
-} from "../CustomComponents/Button";
+import { BorderButtonWithX, FullButtonWithV } from "../CustomComponents/Button";
 import RosPic from "../../assets/ros-pic.png";
 import "./WelcomePage.css";
 const WelcomePage = () => {

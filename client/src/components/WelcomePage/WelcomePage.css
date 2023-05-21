@@ -8,7 +8,7 @@
 }
 .welcome-page {
   padding: 5%;
-  background-image: url("C:\Users\shmuel\Desktop\projects\Hackathon\client\src\assets\elipse.png");
+  background-image: url("../../assets/elipse.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
