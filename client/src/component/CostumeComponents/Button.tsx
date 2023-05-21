@@ -6,7 +6,7 @@ export const FullButton = styled(Button)<ButtonProps>(() => ({
   color: "black",
   fontWeight: "bold",
   "&:hover": {
-    backgroundColor: "#ab4292",
+    backgroundColor: "var(--hover-button)",
   },
 }));
 
@@ -16,6 +16,6 @@ export const BorderButton = styled(Button)<ButtonProps>(() => ({
   fontWeight: "bold",
   border: "1px solid #ab4292",
   "&:hover": {
-    backgroundColor: "#ab4292",
+    backgroundColor: "var(--hover-button)",
   },
 }));

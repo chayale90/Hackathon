@@ -2,6 +2,7 @@
   --color: #e554c2;
   --text-color: black;
   --font-family: "Heebo", sans-serif;
+  --hover-button: #e2a4d3;
 }
 h1,
 h2,
@@ -20,7 +21,7 @@ body {
   align-items: center;
   height: 100vh;
   font-family: var(--font-family);
-  background-color: #eabcdf;
+  background-color: #ffffff;
 }
 button {
   width: 60%;
