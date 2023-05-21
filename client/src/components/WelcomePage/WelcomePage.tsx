@@ -1,6 +1,9 @@
-import { FullButton, BorderButton } from "../CustomComponents/Button";
+import {
+  FullButton,
+  BorderButtonWithX,
+  FullButtonWithV,
+} from "../CustomComponents/Button";
 import RosPic from "../../assets/ros-pic.png";
-
 import "./WelcomePage.css";
 const WelcomePage = () => {
   return (
@@ -25,8 +28,8 @@ const WelcomePage = () => {
         .ובטוחים מאלימות גופנית, מילולית, רגשית וכלכלית
       </p>
       <div className="welcome-page-btn">
-        <FullButton>התחלה </FullButton>
-        <BorderButton>יציאה </BorderButton>
+        <FullButtonWithV content="התחלה" />
+        <BorderButtonWithX content="יציאה" />
       </div>
     </div>
   );
