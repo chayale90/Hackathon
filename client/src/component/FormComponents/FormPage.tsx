@@ -3,7 +3,7 @@
 const FormPage = () => {
   return (
     <div>
-      FormPage
+     <h1>FormPage</h1> 
     </div>
   );
 };
