@@ -1,9 +1,8 @@
-import { Button } from "@mui/material";
-import "./Main.css";
+import { FullButton, BorderButton } from "../CostumeComponents/Button";
 
 const Main = () => {
   return (
-    <div className="main">
+    <div>
       <h1>היי</h1>
       <h2>שמי רוזאן, ואני כאן כדי לעזור לך להגן על ביטחונך.</h2>
       <p>
@@ -18,8 +17,10 @@ const Main = () => {
         דבר שאני מאמינה בו מאוד ואני מאמינה שכל אחד ואחת ראויה לחיים מוגנים
         .ובטוחים מאלימות גופנית, מילולית, רגשית וכלכלית
       </p>
-      <Button>התחלה </Button>
-      <Button>יציאה </Button>
+      <div className="btn">
+        <FullButton>התחלה </FullButton>
+        <BorderButton>יציאה </BorderButton>
+      </div>
     </div>
   );
 };
