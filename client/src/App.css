@@ -1,14 +1,7 @@
 :root {
-  --color: rgb(247, 187, 197);
-  --bgcolor: white;
+  --color: #e554c2;
   --text-color: black;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: "Heebo", sans-serif;
+  --font-family: "Heebo", sans-serif;
 }
 h1,
 h2,
@@ -16,11 +9,22 @@ h3,
 h4,
 body,
 div,
-a,
-img {
+a {
   margin: 0;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--font-family);
+  background-color: var(--color);
+}
 button {
-  text-align: center;
+  width: 60%;
+  font-family: var(--font-family);
+}
+h1 {
+  color: var(--color);
 }
