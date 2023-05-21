@@ -1,12 +1,12 @@
-import { FullButton, BorderButton } from "../CostumeComponents/Button";
+import { FullButton, BorderButton } from "../CustomComponents/Button";
 import RosPic from "../../assets/ros-pic.png";
 
 import "./WelcomePage.css";
 const WelcomePage = () => {
   return (
-    <div className="enter-page">
-      <div className="enter-page-head">
-        <div className="enter-page-title">
+    <div className="welcome-page">
+      <div className="welcome-page-head">
+        <div className="welcome-page-title">
           <h1>היי</h1>
           <h2>שמי רוזאן, ואני כאן כדי לעזור לך להגן על ביטחונך.</h2>
         </div>
@@ -24,7 +24,7 @@ const WelcomePage = () => {
         דבר שאני מאמינה בו מאוד ואני מאמינה שכל אחד ואחת ראויה לחיים מוגנים
         .ובטוחים מאלימות גופנית, מילולית, רגשית וכלכלית
       </p>
-      <div className="btn">
+      <div className="welcome-page-btn">
         <FullButton>התחלה </FullButton>
         <BorderButton>יציאה </BorderButton>
       </div>

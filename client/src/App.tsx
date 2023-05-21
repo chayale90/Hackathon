@@ -10,6 +10,7 @@ function App() {
         <Routes>
           <Route index element={<WelcomePage />} />
           <Route path="/form" element={<FormPage />} />
+          <Route path="/form-page" element={<FormPage />} />
         </Routes>
       </div>
     </BrowserRouter>
