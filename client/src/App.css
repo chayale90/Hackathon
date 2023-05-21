@@ -1,0 +1,26 @@
+:root {
+  --color: rgb(247, 187, 197);
+  --bgcolor: white;
+  --text-color: black;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Heebo", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+body,
+div,
+a,
+img {
+  margin: 0;
+}
+
+button {
+  text-align: center;
+}

@@ -1,7 +1,11 @@
 import "./App.css";
-
+import Main from "./component/Main/Main";
 function App() {
-  return <h1>Hackathon project</h1>;
+  return (
+    <>
+      <Main />
+    </>
+  );
 }
 
 export default App;
