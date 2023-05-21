@@ -1,12 +1,12 @@
 import "./App.css";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import EnterPage from "./component/EnterPage/EnterPage";
+import WelcomePage from "./component/WelcomePage/WelcomePage";
 function App() {
   return (
     <BrowserRouter>
       <div className="main">
         <Routes>
-          <Route path="/" element={<EnterPage />} />
+          <Route path="/" element={<WelcomePage />} />
         </Routes>
       </div>
     </BrowserRouter>

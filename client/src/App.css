@@ -4,9 +4,7 @@
   --font-family: "Heebo", sans-serif;
   --hover-button: #e2a4d3;
 }
-h1,
-h2,
-h3,
+
 h4,
 body,
 div,
@@ -15,38 +13,42 @@ a {
 }
 
 body {
-  color: var(--color);
+  color: var(--text-color);
   display: flex;
+  height: 100vh;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   font-family: var(--font-family);
-  background-color: #ffffff;
+  background-color: #ebc9e3;
 }
 button {
   width: 60%;
 }
-
-.main {
-  padding: 5%;
-  width: 400px;
-  background-color: white;
-}
-
 .btn {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
+.main {
+  width: 400px;
+  background-color: white;
+}
 
 @media screen and (max-width: 768px) {
   body {
+    height: auto;
     background-color: white;
   }
   .main {
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  button {
+    width: 60%;
   }
 }
