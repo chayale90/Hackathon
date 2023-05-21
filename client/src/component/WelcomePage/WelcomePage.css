@@ -1,11 +1,28 @@
-.enter-page-head {
+.welcome-page-head {
   display: flex;
+  align-items: center;
 }
-.enter-page-head > img {
-  width: 45%;
+.welcome-page-head > img {
+  width: 50%;
+  height: 50%;
 }
-.enter-page {
-  padding: 7% 5% 5% 5%;
+.welcome-page {
+  padding: 5%;
   background-image: url("C:\Users\shmuel\Desktop\projects\Hackathon\client\src\assets\elipse.png");
   background-repeat: no-repeat;
+  background-size: 100%;
+}
+.welcome-page-btn {
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+@media screen and (max-width: 768px) {
+  .welcome-page {
+    padding: 0 50px 10px 50px;
+  }
 }
