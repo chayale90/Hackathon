@@ -1,10 +1,17 @@
 import { FullButton, BorderButton } from "../CostumeComponents/Button";
+import RosPic from "../../assets/ros-pic.png";
 
-const Main = () => {
+import "./WelcomePage.css";
+const WelcomePage = () => {
   return (
-    <div>
-      <h1>היי</h1>
-      <h2>שמי רוזאן, ואני כאן כדי לעזור לך להגן על ביטחונך.</h2>
+    <div className="enter-page">
+      <div className="enter-page-head">
+        <div className="enter-page-title">
+          <h1>היי</h1>
+          <h2>שמי רוזאן, ואני כאן כדי לעזור לך להגן על ביטחונך.</h2>
+        </div>
+        <img src={RosPic} alt="ros-pic" />
+      </div>
       <p>
         אני אמא לשתי בנות. עוד כילדה בקשתי לברוח מאלימות שבתוך המשפחה והצלחתי.
         בבגרותי עזבתי מערכת יחסים אלימה. אני רוצה לעזור לך לצאת ממעגל האלימות
@@ -25,4 +32,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default WelcomePage;
