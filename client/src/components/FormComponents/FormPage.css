@@ -1,21 +1,13 @@
 .question .numberQ {
-  margin: 47px 0 18px 0;
   font-weight: 400;
-  font-size: 16px;
-  /* line-height: 24px; */
 }
 
 .weHere {
   margin-top: 54px;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
 }
 
 .question {
-  font-size: 20px;
-  line-height: 150%;
-  width: auto;
+  font-size: 1.2rem;
 }
 
 .vxButtons {

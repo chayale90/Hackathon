@@ -20,7 +20,7 @@ const LocationPage = () => {
   };
 
   return (
-    <div className="location-page page">
+    <div className="page location-page ">
       <Header />
       <p>
         שימי לב ,שמירה זמנית וזיהוי, רק במערכת שלנו בלבד. יאפשרו לי לתת לך את כל
