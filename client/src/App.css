@@ -32,6 +32,14 @@ button {
   align-items: center;
   background-color: white;
 }
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  gap: 25px;
+}
 
 @media screen and (max-width: 400px) {
   body {
@@ -54,5 +62,10 @@ button {
 @media screen and (min-width: 401px) {
   .main {
     width: 500px;
+    height: 635px;
+    overflow: auto;
+  }
+  .main::-webkit-scrollbar {
+    display: none;
   }
 }

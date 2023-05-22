@@ -4,7 +4,7 @@ import Vicon from "../../assets/icons/v-icon.svg";
 import Xicon from "../../assets/icons/x-icon.svg";
 
 export const FullButton = styled(Button)<ButtonProps>(() => ({
-  backgroundColor: "#E554C2",
+  backgroundColor: "var(--color)",
   color: "black",
   fontWeight: "bold",
   fontSize: "20px",
@@ -12,9 +12,9 @@ export const FullButton = styled(Button)<ButtonProps>(() => ({
     backgroundColor: "var(--hover-button)",
   },
 }));
-export const FullButtonWithV = ({ content }: any) => {
+export const FullButtonWithV = ({ content, click }: any) => {
   return (
-    <FullButton>
+    <FullButton onClick={click}>
       {content}
       <img src={Vicon} />
     </FullButton>
@@ -32,11 +32,11 @@ export const BorderButton = styled(Button)<ButtonProps>(() => ({
   },
 }));
 
-export const BorderButtonWithX = ({ content }: any) => {
+export const BorderButtonWithX = ({ content, click }: any) => {
   return (
-    <BorderButton>
-      {content}
+    <BorderButton onClick={click}>
       <img src={Xicon} />
+      {content}
     </BorderButton>
   );
 };

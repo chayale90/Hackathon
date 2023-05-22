@@ -1,7 +1,9 @@
 import { BorderButtonWithX, FullButtonWithV } from "../CustomComponents/Button";
 import RosPic from "../../assets/ros-pic.png";
 import "./WelcomePage.css";
+import { useNavigate } from "react-router-dom";
 const WelcomePage = () => {
+  const navigate = useNavigate();
   return (
     <div className="welcome-page">
       <div className="welcome-page-head">
@@ -24,7 +26,7 @@ const WelcomePage = () => {
         .ובטוחים מאלימות גופנית, מילולית, רגשית וכלכלית
       </p>
       <div className="welcome-page-btn">
-        <FullButtonWithV content="התחלה" />
+        <FullButtonWithV content="התחלה" click={() => navigate("/location")} />
         <BorderButtonWithX content="יציאה" />
       </div>
     </div>
