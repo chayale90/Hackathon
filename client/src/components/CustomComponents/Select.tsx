@@ -1,15 +1,9 @@
-import React from "react";
-import {
-  createStyles,
-  makeStyles,
-  withStyles,
-  Theme,
-} from "@material-ui/core/styles";
+import { createStyles, withStyles } from "@material-ui/core/styles";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import InputBase from "@material-ui/core/InputBase";
 
-const BootstrapInput = withStyles((theme: Theme) =>
+const BootstrapInput = withStyles(() =>
   createStyles({
     input: {
       width: 200,
