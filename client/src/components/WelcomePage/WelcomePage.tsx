@@ -2,6 +2,8 @@ import { BorderButtonWithX, FullButtonWithV } from "../CustomComponents/Button";
 import RosPic from "../../assets/ros-pic.png";
 import "./WelcomePage.css";
 import { useNavigate } from "react-router-dom";
+
+
 const WelcomePage = () => {
   const navigate = useNavigate();
   return (
