@@ -34,13 +34,14 @@ button {
 }
 
 .page {
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 5% 0;
   gap: 30px;
-  width: 100%;
+  width: 90%;
 }
 
 @media screen and (max-width: 500px) {
@@ -57,16 +58,15 @@ button {
     font-size: 1.1rem;
   }
   .main {
-    width: 90vw;
+    width: 100vw;
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .main {
-    padding: 5%;
-    height: 635px;
     overflow: auto;
     width: 500px;
+    justify-content: flex-start;
   }
   .main::-webkit-scrollbar {
     display: none;

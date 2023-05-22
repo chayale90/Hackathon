@@ -3,11 +3,8 @@
   align-items: center;
 }
 .welcome-page-head > img {
-  width: 50%;
-  height: 50%;
 }
 .welcome-page {
-  padding: 5%;
   background-image: url("../../assets/elipse.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -21,7 +18,7 @@
   align-items: center;
   gap: 15px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .welcome-page {
     padding: 0 50px 10px 50px;
   }
