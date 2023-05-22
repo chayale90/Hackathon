@@ -12,6 +12,7 @@ const FormPage: React.FC = () => {
     "האם הפגיעה היא באופן קבוע?",
     "האם היית רוצה לברוח מהמקום הזה?",
   ];
+
   const processImg = [
     "process1.png",
     "process2.png",
@@ -20,9 +21,67 @@ const FormPage: React.FC = () => {
     "process5.png",
   ];
 
+  const [resultsArr] = useState<boolean[]>([]);
+
+  const [level, setLevel] = useState<string>("");
+
   const handleNextQuestion = () => {
     setQuestionIndex((prevIndex) => prevIndex + 1);
   };
+
+  const handleX = () => {
+    resultsArr.push(false)
+    handleNextQuestion();
+    isFullArray()
+  };
+
+  const handleV = () => {
+    resultsArr.push(true)
+    handleNextQuestion();
+    isFullArray()
+
+  };
+
+  const isFullArray = () => {
+    if (questionIndex == 4) {
+      checkResults()
+    }
+  };
+
+  const checkResults = () => {
+    // Displaying the results in the console
+    if (
+      // q1=true && q4=true
+      resultsArr[0] == true && resultsArr[3] == true ||
+      // q1=true && q2=true
+      resultsArr[0] == true && resultsArr[1] == true ||
+      // q1=true && q5=true
+      resultsArr[0] == true && resultsArr[4] == true ||
+      // q4=true
+      resultsArr[3] == true ||
+      // q2=true
+      resultsArr[1]
+    ) setLevel("high")
+    
+    else if (
+      resultsArr[0] == true && resultsArr[1] == false && resultsArr[2] == false && resultsArr[3] == false && resultsArr[4] == false
+      ||
+      resultsArr[0] == true && resultsArr[1] == false && resultsArr[2] == true && resultsArr[3] == false && resultsArr[4] == false
+      ||
+      resultsArr[0] == false && resultsArr[1] == false && resultsArr[2] == false && resultsArr[3] == false && resultsArr[4] == true
+    ) setLevel("middle")
+
+    else if (
+      resultsArr[0] == false && resultsArr[1] == false && resultsArr[2] == true && resultsArr[3] == false && resultsArr[4] == false
+      ||
+      resultsArr[0] == false && resultsArr[1] == false && resultsArr[2] == false && resultsArr[3] == false && resultsArr[4] == false
+    ) setLevel("low") 
+
+    for (let i = 0; i < resultsArr.length; i++) {
+      console.log(`q${i + 1}: ${resultsArr[i]}`);
+    }
+  };
+
 
   return (
     <div className="question page">
@@ -33,10 +92,13 @@ const FormPage: React.FC = () => {
       {questionIndex < questions.length ? (
         <Question
           content={questions[questionIndex]}
-          onNext={handleNextQuestion}
+          onV={handleV}
+          onX={handleX}
         />
-      ) : (
+      ) : (<div>
         <div>All questions answered!</div>
+        <h4> level:{level}</h4>
+      </div>
       )}
     </div>
   );
