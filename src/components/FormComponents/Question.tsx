@@ -6,13 +6,13 @@ interface QuestionProps {
   onX: () => void;
 }
 
-const Question: React.FC<QuestionProps> = ({ content, onV,onX }) => {
+const Question: React.FC<QuestionProps> = ({ content, onV, onX }) => {
   return (
     <div>
       <div>{content}</div>
       <div className="vxButtons">
-        <img src="src/assets/icons/VBigIcon.svg" alt="" onClick={onV} />
-        <img src="src/assets/icons/xBigIcon.svg" alt="" onClick={onX} />
+        <img src="src/assets/icons/VBigIcon.svg" alt="v-icon" onClick={onV} />
+        <img src="src/assets/icons/xBigIcon.svg" alt="x-icon" onClick={onX} />
       </div>
     </div>
   );
