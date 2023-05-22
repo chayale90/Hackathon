@@ -3,7 +3,6 @@ import "./RiskLevelPage.css";
 import { FullButton } from "../CustomComponents/Button";
 import RiskErr from "../../assets/icons/risk-error.svg";
 
-
 const RiskLevelPage = () => {
   return (
     <div className="page risk-level">
