@@ -1,4 +1,6 @@
 import React from "react";
+import VBigIcon from "../../assets/icons/VBigIcon.svg";
+import XBigIcon from "../../assets/icons/xBigIcon.svg";
 
 interface QuestionProps {
   content: string;
@@ -9,10 +11,10 @@ interface QuestionProps {
 const Question: React.FC<QuestionProps> = ({ content, onV, onX }) => {
   return (
     <div>
-      <div>{content}</div>
+      <p>{content}</p>
       <div className="vxButtons">
-        <img src="src/assets/icons/VBigIcon.svg" alt="v-icon" onClick={onV} />
-        <img src="src/assets/icons/xBigIcon.svg" alt="x-icon" onClick={onX} />
+        <img src={VBigIcon} alt="v-icon" onClick={onV} />
+        <img src={XBigIcon} alt="x-icon" onClick={onX} />
       </div>
     </div>
   );
