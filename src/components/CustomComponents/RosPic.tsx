@@ -1,4 +1,4 @@
-import img from "../../assets/ros-pic.png";
+import img from "../../assets/icons/rozan.svg";
 import soundIcon from "../../assets/icons/sound-icon.svg";
 import { useState } from "react";
 const RosPic = ({ sourceAudio }: any) => {

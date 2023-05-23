@@ -1,9 +1,10 @@
+import { useNavigate } from "react-router-dom";
+import { FullButtonWithV, BorderButtonWithX } from "../CustomComponents/Button";
 import Header from "../Header/Header";
 import "./LocationPage.css";
-import { FullButtonWithV, BorderButtonWithX } from "../CustomComponents/Button";
-import { useNavigate } from "react-router-dom";
+import RosPic from "../CustomComponents/RosPic";
 
-const LocationPage = () => {
+const LocationPage = ({ sourceAudio }: any) => {
   const navigate = useNavigate();
   const getLocation = async () => {
     try {
@@ -27,8 +28,11 @@ const LocationPage = () => {
         כאן אשאל אותך חמש שאלות קצרות כדי להכיר אותך ואת מצבך טוב יותר. תלחצי על
         "מתחילים"!
       </p>
-      <FullButtonWithV content="הזדהות" click={getLocation} />
-      <BorderButtonWithX content="ללא הזדהות" click={() => navigate("/form")} />
+      <RosPic sourceAudio={sourceAudio} />
+      <FullButtonWithV content="מסכימה" click={getLocation} />
+      <BorderButtonWithX content="מוותרת כרגע" click={() => navigate("/form")} />
+
+      <div>חשוב להדגיש שאין כאן שום תחליף לגופים המתמקצעים באלימות במשפחה ותמיד כדאי במקרה של סכנה לפנות למשטרה! </div>
     </div>
   );
 };
