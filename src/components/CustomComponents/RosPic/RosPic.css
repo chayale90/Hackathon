@@ -1,0 +1,12 @@
+.rospic {
+  display: flex;
+}
+
+.rospic img:nth-child(1) {
+  align-self: flex-start;
+  position: absolute;
+}
+
+.rospic img:nth-child(2) {
+  padding-top: 15px;
+}

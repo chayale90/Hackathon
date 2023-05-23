@@ -6,15 +6,17 @@ import { useNavigate } from "react-router-dom";
 
 const SelectAssociationsPage = () => {
   const navigate = useNavigate();
-  const associationList = (x: any) => {
-    if (x.target.value === Regions.North) {
+
+  const associationList = (click: any) => {
+    if (click.target.value === Regions.North) {
       navigate("/associations/north");
-    } else if (x.target.value === Regions.Central) {
+    } else if (click.target.value === Regions.Central) {
       navigate("/associations/central");
     } else {
       navigate("/associations/south");
     }
   };
+
   return (
     <div className="page associations-page">
       <Header />

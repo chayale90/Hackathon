@@ -2,9 +2,9 @@ import { useNavigate } from "react-router-dom";
 import { FullButtonWithV, BorderButtonWithX } from "../CustomComponents/Button";
 import Header from "../Header/Header";
 import "./LocationPage.css";
-import RosPic from "../CustomComponents/RosPic";
+import RosPic from "../CustomComponents/RosPic/RosPic";
 
-const LocationPage = ({ sourceAudio }: any) => {
+const LocationPage = () => {
   const navigate = useNavigate();
   const getLocation = async () => {
     try {
@@ -28,11 +28,17 @@ const LocationPage = ({ sourceAudio }: any) => {
         כאן אשאל אותך חמש שאלות קצרות כדי להכיר אותך ואת מצבך טוב יותר. תלחצי על
         "מתחילים"!
       </p>
-      <RosPic sourceAudio={sourceAudio} />
+      <RosPic />
       <FullButtonWithV content="מסכימה" click={getLocation} />
-      <BorderButtonWithX content="מוותרת כרגע" click={() => navigate("/form")} />
+      <BorderButtonWithX
+        content="מוותרת כרגע"
+        click={() => navigate("/form")}
+      />
 
-      <div>חשוב להדגיש שאין כאן שום תחליף לגופים המתמקצעים באלימות במשפחה ותמיד כדאי במקרה של סכנה לפנות למשטרה! </div>
+      <div>
+        חשוב להדגיש שאין כאן שום תחליף לגופים המתמקצעים באלימות במשפחה ותמיד
+        כדאי במקרה של סכנה לפנות למשטרה!{" "}
+      </div>
     </div>
   );
 };

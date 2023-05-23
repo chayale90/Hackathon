@@ -2,13 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 90%;
 }
-
+.welcome-page-head h1 {
+  font-size: 2rem;
+}
 .welcome-page {
   background-image: url("../../assets/elipse.png");
   background-repeat: no-repeat;
   background-size: 100%;
+  text-align: right;
+  width: 100%;
+  gap: 25px;
+}
+.welcome-page p {
+  width: 90%;
 }
 .welcome-page-btn {
   padding-top: 1rem;
@@ -19,11 +27,7 @@
   align-items: center;
   gap: 15px;
 }
-@media screen and (max-width: 500px) {
-  .welcome-page {
-    padding: 0 50px 10px 50px;
-  }
-  .welcome-page-head > img {
-    width: 50%;
-  }
+.welcome-page-btns-position {
+  display: flex;
+  gap: 10px;
 }

@@ -5,9 +5,10 @@ import Xicon from "../../assets/icons/x-icon.svg";
 
 export const FullButton = styled(Button)<ButtonProps>(() => ({
   backgroundColor: "var(--color)",
-  color: "black",
+  color: "white",
   fontWeight: "bold",
-  fontSize: "20px",
+  fontSize: "16px",
+  height: "30px",
   "&:hover": {
     backgroundColor: "var(--hover-button)",
   },
@@ -24,10 +25,11 @@ export const FullButtonWithV = ({ content, click }: any) => {
 
 export const BorderButton = styled(Button)<ButtonProps>(() => ({
   backgroundColor: "#white",
-  color: "black",
+  color: "var(--color)",
   fontWeight: "bold",
-  border: "1px solid #ab4292",
-  fontSize: "20px",
+  border: "2px solid var(--color)",
+  fontSize: "16px",
+  height: "30px",
 
   "&:hover": {
     backgroundColor: "var(--hover-button)",
