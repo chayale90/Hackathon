@@ -1,7 +1,6 @@
 import React from "react";
 import YesBtn from "../../assets/icons/yesBtn.svg";
 import NoBtn from "../../assets/icons/noBtn.svg";
-import ReturnQuestion from "../../assets/icons/returnQuestion.svg";
 
 interface QuestionProps {
   onV: () => void;
@@ -26,7 +25,6 @@ const Question: React.FC<QuestionProps> = ({ onV, onX }) => {
         />
       </div>
 
-      <img style={{ margin: "24% 24% 0 0" }} src={ReturnQuestion} alt="NoBtn" />
     </div>
   );
 };

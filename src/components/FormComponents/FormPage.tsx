@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
-import Question from "./Question";
-import "./FormPage.css";
-import Header from "../Header/Header";
 import { useNavigate } from "react-router-dom";
 import { Context, globalType } from "../Context/Context";
+import Header from "../Header/Header";
+import ReturnQuestion from "../../assets/icons/returnQuestion.svg";
+import Question from "./Question";
+import "./FormPage.css";
 
 const FormPage: React.FC = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -34,6 +35,12 @@ const FormPage: React.FC = () => {
   const handleNextQuestion = () => {
     setQuestionIndex((prevIndex) => prevIndex + 1);
   };
+
+  const handlePrevQuestion = () => {
+    if(questionIndex>0)
+    setQuestionIndex((prevIndex) => prevIndex- 1);
+  };
+
 
   const handleX = () => {
     resultsArr.push(false);
@@ -116,6 +123,7 @@ const FormPage: React.FC = () => {
       {questionIndex < questions.length && (
         <Question onV={handleV} onX={handleX} />
       )}
+      <img onClick={handlePrevQuestion} src={ReturnQuestion} alt="ReturnQuestion" />
     </div>
   );
 };
