@@ -14,6 +14,7 @@ const BootstrapInput = withStyles(() =>
     },
   })
 )(InputBase);
+
 export enum Regions {
   North = 1,
   Central,

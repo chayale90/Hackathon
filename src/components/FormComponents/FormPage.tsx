@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Question from "./Question";
 import "./FormPage.css";
 import Header from "../Header/Header";
 import { useNavigate } from "react-router-dom";
+import { Context, riskLevelType } from "../Context/Context";
 
 const FormPage: React.FC = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
+  const { setRiskLevel } = useContext(Context) as riskLevelType;
   const navigate = useNavigate();
   useEffect(() => {
     questionIndex === questions.length && navigate("/riskLevel");
-    console.log(questionIndex);
   }, [questionIndex]);
+
   const questions = [
     "אם את מפחדת או חוששת מאדם הקרוב אליך?",
     "האם פוגעים בך נפשית, מילולית, רגשית כלכלית, פיזית?",
@@ -66,9 +68,10 @@ const FormPage: React.FC = () => {
       resultsArr[3] == true ||
       // q2=true
       resultsArr[1]
-    )
+    ) {
       setLevel("high");
-    else if (
+      setRiskLevel("high");
+    } else if (
       (resultsArr[0] == true &&
         resultsArr[1] == false &&
         resultsArr[2] == false &&
@@ -84,9 +87,10 @@ const FormPage: React.FC = () => {
         resultsArr[2] == false &&
         resultsArr[3] == false &&
         resultsArr[4] == true)
-    )
+    ) {
       setLevel("middle");
-    else if (
+      setRiskLevel("middle");
+    } else if (
       (resultsArr[0] == false &&
         resultsArr[1] == false &&
         resultsArr[2] == true &&
@@ -97,8 +101,10 @@ const FormPage: React.FC = () => {
         resultsArr[2] == false &&
         resultsArr[3] == false &&
         resultsArr[4] == false)
-    )
+    ) {
       setLevel("low");
+      setRiskLevel("low");
+    }
 
     for (let i = 0; i < resultsArr.length; i++) {
       console.log(`q${i + 1}: ${resultsArr[i]}`);

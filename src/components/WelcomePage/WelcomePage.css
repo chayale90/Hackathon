@@ -1,9 +1,10 @@
 .welcome-page-head {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
-.welcome-page-head > img {
-}
+
 .welcome-page {
   background-image: url("../../assets/elipse.png");
   background-repeat: no-repeat;
@@ -21,5 +22,8 @@
 @media screen and (max-width: 500px) {
   .welcome-page {
     padding: 0 50px 10px 50px;
+  }
+  .welcome-page-head > img {
+    width: 50%;
   }
 }

@@ -2,3 +2,31 @@
 p {
   margin: 0;
 }
+.associations-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.associations-btns button {
+  color: white;
+}
+.inline-btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.inline-btns button:nth-child(1) {
+  width: 30%;
+}
+.inline-btns button:nth-child(2) {
+  width: 60%;
+  border-color: var(--color);
+  color: var(--color);
+}
+.associations-btns > button:nth-child(1) {
+  width: 100%;
+  align-self: center;
+}

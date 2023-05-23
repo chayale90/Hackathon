@@ -3,7 +3,6 @@ import RosPic from "../../assets/ros-pic.png";
 import "./WelcomePage.css";
 import { useNavigate } from "react-router-dom";
 
-
 const WelcomePage = () => {
   const navigate = useNavigate();
   return (
@@ -29,7 +28,13 @@ const WelcomePage = () => {
       </p>
       <div className="welcome-page-btn">
         <FullButtonWithV content="התחלה" click={() => navigate("/location")} />
-        <BorderButtonWithX content="יציאה" />
+        <BorderButtonWithX
+          content="יציאה"
+          click={() =>
+            // Simulate an HTTP redirect:
+            window.location.replace("http://google.com")
+          }
+        />
       </div>
     </div>
   );

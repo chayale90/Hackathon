@@ -14,6 +14,7 @@ const LocationPage = () => {
         const data = await response.json();
         console.log(data.display_name);
       });
+      navigate("/form");
     } catch (e) {
       console.log(e);
     }
@@ -23,17 +24,11 @@ const LocationPage = () => {
     <div className="page location-page ">
       <Header />
       <p>
-        שימי לב ,שמירה זמנית וזיהוי, רק במערכת שלנו בלבד. יאפשרו לי לתת לך את כל
-        הכלים בהם אשמח לעזור לך, מתוך ניסיון כמה ,שיותר מידע וכמה שיותר מדויק
-        עבורך יקל עליך את התהליך והמעבר.
-      </p>
-      <FullButtonWithV content="שמירה וזיהוי מיקום" click={getLocation} />
-      <BorderButtonWithX content="ללא הזדהות" />
-      <p>
         כאן אשאל אותך חמש שאלות קצרות כדי להכיר אותך ואת מצבך טוב יותר. תלחצי על
         "מתחילים"!
       </p>
-      <FullButtonWithV content="מתחילים" click={() => navigate("/form")} />
+      <FullButtonWithV content="הזדהות" click={getLocation} />
+      <BorderButtonWithX content="ללא הזדהות" click={() => navigate("/form")} />
     </div>
   );
 };

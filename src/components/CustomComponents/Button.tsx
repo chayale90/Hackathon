@@ -12,6 +12,7 @@ export const FullButton = styled(Button)<ButtonProps>(() => ({
     backgroundColor: "var(--hover-button)",
   },
 }));
+
 export const FullButtonWithV = ({ content, click }: any) => {
   return (
     <FullButton onClick={click}>
@@ -20,6 +21,7 @@ export const FullButtonWithV = ({ content, click }: any) => {
     </FullButton>
   );
 };
+
 export const BorderButton = styled(Button)<ButtonProps>(() => ({
   backgroundColor: "#white",
   color: "black",
