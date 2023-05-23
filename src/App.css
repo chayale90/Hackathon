@@ -21,6 +21,7 @@ body {
   font-family: var(--font-family);
   background-color: #ebc9e3;
 }
+
 button {
   width: 65%;
 }
@@ -45,20 +46,28 @@ button {
 }
 
 .none {
-  display: none !important;
+  display: none;
 }
+
+.block {
+  display: block;
+}
+
 @media screen and (max-width: 500px) {
   body {
     background-color: white;
     align-items: flex-start;
   }
+
   h1,
   h2 {
     font-size: 1.3rem;
   }
+
   p {
     font-size: 1.1rem;
   }
+
   .main {
     width: 100vw;
   }
@@ -70,6 +79,7 @@ button {
     width: 500px;
     justify-content: flex-start;
   }
+
   .main::-webkit-scrollbar {
     display: none;
   }

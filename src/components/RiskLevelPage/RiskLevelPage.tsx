@@ -27,11 +27,13 @@ const RiskLevelPage = () => {
         <FullButton onClick={() => navigate("/associations")}>
           פנייה אנונימית לעמותה באזור שלי
         </FullButton>
-        <div className="inline-btns none">
-          <FullButton>צעדים מקדימים</FullButton>
-          <BorderButton>לקריאת סיפורי נשים במצב שלי</BorderButton>
+        <div className={riskLevel=="middle"?"block":"none"}>
+          <div className="inline-btns">
+            <FullButton>צעדים מקדימים</FullButton>
+            <BorderButton>לקריאת סיפורי נשים במצב שלי</BorderButton>
+          </div>
+          <FullButton>סיוע משפטי</FullButton>
         </div>
-        <FullButton className="none"> סיוע משפטי</FullButton>
       </div>
     </div>
   );

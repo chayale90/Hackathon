@@ -9,11 +9,32 @@
 .question {
   font-size: 1.2rem;
 }
-.question > p {
+
+.question>p {
   height: 50px;
 }
+
 .vxButtons {
   display: flex;
   justify-content: center;
   gap: 22.5px;
+}
+
+.vButton {
+  border-radius: 50%;
+  background: rgb(199, 76, 162);
+  border: none;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.xButton {
+  border-radius: 50%;
+  color: rgb(199, 76, 162);
+  background: white;
+  border: none;
+  border: 2px solid rgb(199, 76, 162);
+  padding: 20px;
+  cursor: pointer;
 }
