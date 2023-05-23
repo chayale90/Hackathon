@@ -1,8 +1,8 @@
 import { BorderButtonWithX, FullButtonWithV } from "../CustomComponents/Button";
-import RosPic from "../../assets/ros-pic.png";
+import RosPic from "../CustomComponents/RosPic";
 import "./WelcomePage.css";
 import { useNavigate } from "react-router-dom";
-
+import Record from "../../assets/records/who_am_i.mp3";
 const WelcomePage = () => {
   const navigate = useNavigate();
   return (
@@ -12,7 +12,7 @@ const WelcomePage = () => {
           <h1>היי</h1>
           <h2>שמי רוזאן, ואני כאן כדי לעזור לך להגן על ביטחונך.</h2>
         </div>
-        <img src={RosPic} alt="ros-pic" />
+        <RosPic sourceAudio={Record} />
       </div>
       <p>
         אני אמא לשתי בנות. עוד כילדה בקשתי לברוח מאלימות שבתוך המשפחה והצלחתי.

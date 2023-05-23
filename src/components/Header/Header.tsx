@@ -1,14 +1,14 @@
 import "./Header.css";
 import Menu from "../../assets/icons/menu.svg";
 import Row from "../../assets/icons/row.svg";
-import Ros from "../../assets/icons/ros-header.svg";
+import RosPic from "../CustomComponents/RosPic";
 
-const Header = () => {
+const Header = ({ sourceAudio }: any) => {
   return (
     <nav>
       <img src={Menu} alt="menu-btn" />
       <span>
-        <img src={Ros} alt="ros-image" />
+        <RosPic sourceAudio={sourceAudio} />
         <img src={Row} alt="row-btn" />
       </span>
     </nav>
