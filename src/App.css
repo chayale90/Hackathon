@@ -44,9 +44,11 @@ button {
   width: 90%;
 }
 
+.none {
+  display: none !important;
+}
 @media screen and (max-width: 500px) {
   body {
-    height: none;
     background-color: white;
     align-items: flex-start;
   }

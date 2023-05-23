@@ -16,10 +16,8 @@ const AppRoutes: React.FC = () => {
         <Routes>
           <Route path="/" element={<WelcomePage />} />
           <Route path="/location" element={<LocationPage />} />
-
           <Route path="/form" element={<FormPage />} />
           <Route path="/riskLevel" element={<RiskLevelPage />} />
-
           <Route path="/associations" element={<SelectAssociationsPage />} />
           <Route path="/associations/:region" element={<AssociationsList />} />
         </Routes>

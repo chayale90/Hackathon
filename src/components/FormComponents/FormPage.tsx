@@ -3,11 +3,11 @@ import Question from "./Question";
 import "./FormPage.css";
 import Header from "../Header/Header";
 import { useNavigate } from "react-router-dom";
-import { Context, riskLevelType } from "../Context/Context";
+import { Context, globalType } from "../Context/Context";
 
 const FormPage: React.FC = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
-  const { setRiskLevel } = useContext(Context) as riskLevelType;
+  const { setRiskLevel } = useContext(Context) as globalType;
   const navigate = useNavigate();
   useEffect(() => {
     questionIndex === questions.length && navigate("/riskLevel");
@@ -30,8 +30,6 @@ const FormPage: React.FC = () => {
   ];
 
   const [resultsArr] = useState<boolean[]>([]);
-
-  const [level, setLevel] = useState<string>("");
 
   const handleNextQuestion = () => {
     setQuestionIndex((prevIndex) => prevIndex + 1);
@@ -69,7 +67,6 @@ const FormPage: React.FC = () => {
       // q2=true
       resultsArr[1]
     ) {
-      setLevel("high");
       setRiskLevel("high");
     } else if (
       (resultsArr[0] == true &&
@@ -88,7 +85,6 @@ const FormPage: React.FC = () => {
         resultsArr[3] == false &&
         resultsArr[4] == true)
     ) {
-      setLevel("middle");
       setRiskLevel("middle");
     } else if (
       (resultsArr[0] == false &&
@@ -102,7 +98,6 @@ const FormPage: React.FC = () => {
         resultsArr[3] == false &&
         resultsArr[4] == false)
     ) {
-      setLevel("low");
       setRiskLevel("low");
     }
 
