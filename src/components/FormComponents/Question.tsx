@@ -11,13 +11,22 @@ interface QuestionProps {
 const Question: React.FC<QuestionProps> = ({ onV, onX }) => {
   return (
     <div>
-    <div className="vxButtons">
-      <img style={{ cursor: "pointer" }} onClick={onV} src={YesBtn} alt="yesBtn" />
-      <img style={{ cursor: "pointer" }} onClick={onX} src={NoBtn} alt="NoBtn" />
+      <div className="vxButtons">
+        <img
+          style={{ cursor: "pointer" }}
+          onClick={onV}
+          src={YesBtn}
+          alt="yesBtn"
+        />
+        <img
+          style={{ cursor: "pointer" }}
+          onClick={onX}
+          src={NoBtn}
+          alt="NoBtn"
+        />
+      </div>
 
-     </div>
-
-  <img style={{margin:"24%"}} src={ReturnQuestion} alt="NoBtn" />
+      <img style={{ margin: "24% 24% 0 0" }} src={ReturnQuestion} alt="NoBtn" />
     </div>
   );
 };
