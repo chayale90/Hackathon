@@ -15,7 +15,7 @@
   width: 100%;
   gap: 25px;
 }
-.welcome-page p {
+.welcome-page > p {
   width: 90%;
 }
 .welcome-page-btn {
@@ -30,4 +30,5 @@
 .welcome-page-btns-position {
   display: flex;
   gap: 10px;
+  width: 50%;
 }

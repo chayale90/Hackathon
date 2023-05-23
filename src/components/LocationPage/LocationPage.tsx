@@ -25,8 +25,7 @@ const LocationPage = () => {
     <div className="page location-page ">
       <Header />
       <p>
-        כאן אשאל אותך חמש שאלות קצרות כדי להכיר אותך ואת מצבך טוב יותר. תלחצי על
-        "מתחילים"!
+        שימי לב ,המידע המובא מחייב אותנו להפעיל את מיקומך. הפרטים ישמרו אצלנו.
       </p>
       <RosPic />
       <FullButtonWithV content="מסכימה" click={getLocation} />

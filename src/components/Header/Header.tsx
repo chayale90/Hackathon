@@ -8,7 +8,7 @@ const Header = () => {
     <nav>
       <img src={Menu} alt="menu-btn" />
       <img src={Call100} alt="row-btn" />
-      <div>عربيه</div>
+      <p>عربيه</p>
       <img src={Logo} alt="row-btn" />
     </nav>
   );
