@@ -1,29 +1,10 @@
 import img from "../../assets/icons/rozan.svg";
 import soundIcon from "../../assets/icons/sound-icon.svg";
-import { useState } from "react";
-const RosPic = ({ sourceAudio }: any) => {
-  const [state, setState] = useState(false);
-  const toogle = () => (state ? setState(false) : setState(true));
-  const myAudioFunction = () => {
-    const aAudio = new Audio(sourceAudio);
-    !state ? aAudio.play() : aAudio.pause();
-  };
+const RosPic = () => {
   return (
     <div className="rospic">
-      <img
-        className={state ? null : "none"}
-        src={soundIcon}
-        alt="sound-pic"
-        onClick={myAudioFunction}
-      />
-      <img
-        src={img}
-        alt="ros-pic"
-        onClick={() => {
-          toogle();
-          myAudioFunction();
-        }}
-      />
+      <img className="none" src={soundIcon} alt="sound-pic" />
+      <img src={img} alt="ros-pic" />
     </div>
   );
 };

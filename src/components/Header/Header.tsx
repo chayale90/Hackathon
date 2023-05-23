@@ -7,8 +7,6 @@ const Header = () => {
   return (
     <nav>
       <img src={Menu} alt="menu-btn" />
-
-
       <img src={Call100} alt="row-btn" />
       <div>عربيه</div>
       <img src={Logo} alt="row-btn" />
