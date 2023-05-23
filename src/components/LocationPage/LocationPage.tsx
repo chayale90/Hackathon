@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 import "./LocationPage.css";
 import RosPic from "../CustomComponents/RosPic";
 
-const LocationPage = ({ sourceAudio }: any) => {
+const LocationPage = () => {
   const navigate = useNavigate();
   const getLocation = async () => {
     try {
@@ -25,14 +25,19 @@ const LocationPage = ({ sourceAudio }: any) => {
     <div className="page location-page ">
       <Header />
       <p>
-        כאן אשאל אותך חמש שאלות קצרות כדי להכיר אותך ואת מצבך טוב יותר. תלחצי על
-        "מתחילים"!
+        שימי לב ,המידע המובא מחייב אותנו להפעיל את מיקומך. הפרטים ישמרו אצלנו.
       </p>
-      <RosPic sourceAudio={sourceAudio} />
+      <RosPic />
       <FullButtonWithV content="מסכימה" click={getLocation} />
-      <BorderButtonWithX content="מוותרת כרגע" click={() => navigate("/form")} />
+      <BorderButtonWithX
+        content="מוותרת כרגע"
+        click={() => navigate("/form")}
+      />
 
-      <div>חשוב להדגיש שאין כאן שום תחליף לגופים המתמקצעים באלימות במשפחה ותמיד כדאי במקרה של סכנה לפנות למשטרה! </div>
+      <div>
+        חשוב להדגיש שאין כאן שום תחליף לגופים המתמקצעים באלימות במשפחה ותמיד
+        כדאי במקרה של סכנה לפנות למשטרה!{" "}
+      </div>
     </div>
   );
 };
