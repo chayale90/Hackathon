@@ -23,7 +23,6 @@ const LocationPage = () => {
 
   return (
     <div className="page location-page ">
-      <Header />
       <p>
         שימי לב ,המידע המובא מחייב אותנו להפעיל את מיקומך. הפרטים ישמרו אצלנו.
       </p>

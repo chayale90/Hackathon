@@ -11,7 +11,6 @@ const WelcomePage = () => {
   const navigate = useNavigate();
   return (
     <div className="welcome-page page">
-      <Header />
       <div className="welcome-page-head">
         <div className="welcome-page-title">
           <h1>היי</h1>

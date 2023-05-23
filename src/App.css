@@ -28,7 +28,6 @@ button {
 
 .main {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   background-color: white;
@@ -43,6 +42,7 @@ button {
   padding: 5% 0;
   gap: 30px;
   width: 90%;
+  margin-top: 90px;
 }
 
 .none {
@@ -70,6 +70,10 @@ button {
 
   .main {
     width: 100vw;
+    min-height: 600px;
+  }
+  nav {
+    width: 90vw;
   }
 }
 
@@ -82,5 +86,8 @@ button {
 
   .main::-webkit-scrollbar {
     display: none;
+  }
+  nav {
+    width: 450px;
   }
 }
