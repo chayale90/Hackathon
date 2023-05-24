@@ -28,7 +28,12 @@ const RiskLevelPage = () => {
         <BorderButton className={riskLevel !== "middle" ? "none" : "block"}>
           לקריאת סיפורי נשים במצב שלי
         </BorderButton>
-        <FullButton onClick={()=>{navigate("/LegalAid")}} className={riskLevel !== "middle" ? "none" : "block"}>
+        <FullButton
+          onClick={() => {
+            navigate("/LegalAid");
+          }}
+          className={riskLevel !== "middle" ? "none" : "block"}
+        >
           סיוע משפטי
         </FullButton>
         <BorderButton className={riskLevel !== "middle" ? "none" : "block"}>
