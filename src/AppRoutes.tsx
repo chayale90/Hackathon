@@ -9,6 +9,7 @@ import RiskLevelPage from "./components/RiskLevelPage/RiskLevelPage";
 import SelectAssociationsPage from "./components/AssociationsPage/AssociationsPage";
 import AssociationsList from "./components/AssociationsPage/AssociationsList/AssociationsList";
 import { GlobalContext } from "./components/Context/Context";
+import LegalAid from "./components/legalAidComponents/legalAid";
 const AppRoutes: React.FC = () => {
   return (
     <GlobalContext>
@@ -20,6 +21,7 @@ const AppRoutes: React.FC = () => {
           <Route path="/riskLevel" element={<RiskLevelPage />} />
           <Route path="/associations" element={<SelectAssociationsPage />} />
           <Route path="/associations/:region" element={<AssociationsList />} />
+          <Route path="/LegalAid" element={<LegalAid />} />
         </Routes>
         <ToastContainer position="top-left" theme="colored" />
       </Router>
