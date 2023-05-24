@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import Header from "../../Header/Header";
 
 const AssociationsList = () => {
   const { region } = useParams();
@@ -31,7 +30,6 @@ const AssociationsList = () => {
 
   return (
     <div className="page associations-list">
-      <Header />
       <h1>{`רשימת עמותות באזור ה${regions[region]}`}</h1>
       <ul>
         {arr.map((value, index) => (

@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { FullButtonWithV, BorderButtonWithX } from "../CustomComponents/Button";
-import Header from "../Header/Header";
 import "./LocationPage.css";
 import RosPic from "../CustomComponents/RosPic/RosPic";
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import Question from "./Question";
 import "./FormPage.css";
-import Header from "../Header/Header";
 import { useNavigate } from "react-router-dom";
 import { Context, globalType } from "../Context/Context";
 
@@ -108,7 +107,6 @@ const FormPage: React.FC = () => {
 
   return (
     <div className="question page">
-      <Header />
       <img src={`src/assets/${processImg[questionIndex]}`} alt="process1" />
       <div className="weHere">אנחנו כאן לשמוע את קולך!</div>
       <div className="numberQ">שאלה {questionIndex + 1} מתוך 5</div>

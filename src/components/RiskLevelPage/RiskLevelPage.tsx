@@ -1,4 +1,3 @@
-import Header from "../Header/Header";
 import "./RiskLevelPage.css";
 import { FullButton, BorderButton } from "../CustomComponents/Button";
 import RiskErr from "../../assets/icons/risk-error.svg";
@@ -18,7 +17,6 @@ const RiskLevelPage = () => {
   };
   return (
     <div className="page risk-level">
-      <Header />
       <img src={RiskErr} alt="" />
       <p>בהתאם לתשובות שלך, אנחנו מעריכים שרמת הסכנה שבה את נמצאת כעת הנה: </p>
       <h1>רמת סכנה {riskLevel ? `${title[riskLevel]}` : "לא זוהתה"}</h1>

@@ -6,7 +6,7 @@ import {
 import RosPic from "../CustomComponents/RosPic/RosPic";
 import "./WelcomePage.css";
 import { useNavigate } from "react-router-dom";
-import Header from "../Header/Header";
+
 const WelcomePage = () => {
   const navigate = useNavigate();
   return (
