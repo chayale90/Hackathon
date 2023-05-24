@@ -1,5 +1,4 @@
 import MapIcon from "../../assets/icons/map.svg";
-import Header from "../Header/Header";
 import "./AssociationsPage.css";
 import { RegionList, Regions } from "../CustomComponents/Select";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +18,6 @@ const SelectAssociationsPage = () => {
 
   return (
     <div className="page associations-page">
-      <Header />
       <p>
         כדי לכוון אותך בצורה מדוייקת לעמותה המתאימה עבורך, אנחנו נצטרך את המיקום
         המדויק שלך!

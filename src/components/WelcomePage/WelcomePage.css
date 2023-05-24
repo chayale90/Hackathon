@@ -9,6 +9,9 @@
 .welcome-page-head h1 {
   font-size: 2rem;
 }
+.welcome-page-title {
+  text-align: right;
+}
 .welcome-page {
   background-image: url("../../assets/elipse.png");
   background-repeat: no-repeat;

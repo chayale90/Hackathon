@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Context, globalType } from "../Context/Context";
-import Header from "../Header/Header";
 import ReturnQuestion from "../../assets/icons/returnQuestion.svg";
 import Question from "./Question";
 import "./FormPage.css";
@@ -37,12 +36,9 @@ const FormPage: React.FC = () => {
   };
 
   const handlePrevQuestion = () => {
-    if (questionIndex > 0) {
-      setQuestionIndex((prevIndex) => prevIndex - 1);
-      resultsArr.pop();
-    }
+    if(questionIndex>0)
+    setQuestionIndex((prevIndex) => prevIndex- 1);
   };
-
 
   const handleX = () => {
     resultsArr.push(false);
@@ -117,7 +113,6 @@ const FormPage: React.FC = () => {
 
   return (
     <div className="question page">
-      <Header />
       <img src={`src/assets/${processImg[questionIndex]}`} alt="process1" />
       <div className="weHere">אנחנו כאן לשמוע את קולך!</div>
       <div className="numberQ">שאלה {questionIndex + 1} מתוך 5</div>
@@ -125,7 +120,11 @@ const FormPage: React.FC = () => {
       {questionIndex < questions.length && (
         <Question onV={handleV} onX={handleX} />
       )}
-      <img onClick={handlePrevQuestion} src={ReturnQuestion} alt="ReturnQuestion" />
+      <img
+        onClick={handlePrevQuestion}
+        src={ReturnQuestion}
+        alt="ReturnQuestion"
+      />
     </div>
   );
 };
