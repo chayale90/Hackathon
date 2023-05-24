@@ -36,8 +36,10 @@ const FormPage: React.FC = () => {
   };
 
   const handlePrevQuestion = () => {
-    if(questionIndex>0)
-    setQuestionIndex((prevIndex) => prevIndex- 1);
+    if (questionIndex > 0) {
+      setQuestionIndex((prevIndex) => prevIndex - 1);
+      resultsArr.pop();
+    }
   };
 
   const handleX = () => {
