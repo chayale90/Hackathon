@@ -9,6 +9,7 @@ const FormPage: React.FC = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const { setRiskLevel } = useContext(Context) as globalType;
   const navigate = useNavigate();
+  
   useEffect(() => {
     questionIndex === questions.length && navigate("/riskLevel");
   }, [questionIndex]);
@@ -60,58 +61,25 @@ const FormPage: React.FC = () => {
     }
   };
 
-  const checkResults = () => {
-    // Displaying the results in the console
-    if (
-      // q1=true && q4=true
-      (resultsArr[0] == true && resultsArr[3] == true) ||
-      // q1=true && q2=true
-      (resultsArr[0] == true && resultsArr[1] == true) ||
-      // q1=true && q5=true
-      (resultsArr[0] == true && resultsArr[4] == true) ||
-      // q4=true
-      resultsArr[3] == true ||
-      // q2=true
-      resultsArr[1]
-    ) {
-      setRiskLevel("high");
-    } else if (
-      (resultsArr[0] == true &&
-        resultsArr[1] == false &&
-        resultsArr[2] == false &&
-        resultsArr[3] == false &&
-        resultsArr[4] == false) ||
-      (resultsArr[0] == true &&
-        resultsArr[1] == false &&
-        resultsArr[2] == true &&
-        resultsArr[3] == false &&
-        resultsArr[4] == false) ||
-      (resultsArr[0] == false &&
-        resultsArr[1] == false &&
-        resultsArr[2] == false &&
-        resultsArr[3] == false &&
-        resultsArr[4] == true)
-    ) {
-      setRiskLevel("middle");
-    } else if (
-      (resultsArr[0] == false &&
-        resultsArr[1] == false &&
-        resultsArr[2] == true &&
-        resultsArr[3] == false &&
-        resultsArr[4] == false) ||
-      (resultsArr[0] == false &&
-        resultsArr[1] == false &&
-        resultsArr[2] == false &&
-        resultsArr[3] == false &&
-        resultsArr[4] == false)
-    ) {
-      setRiskLevel("low");
-    }
+const checkResults = () => {
+  const [q1, q2, q3, q4, q5] = resultsArr;
 
-    for (let i = 0; i < resultsArr.length; i++) {
-      console.log(`q${i + 1}: ${resultsArr[i]}`);
-    }
-  };
+  if ((q1 && (q4 || q2 || q5)) || q4 || q2) {
+    setRiskLevel("high");
+  } else if ((q1 && !q2 && !q3 && !q4 && !q5) ||
+    (q1 && !q2 && q3 && !q4 && !q5) ||
+    (!q1 && !q2 && !q3 && !q4 && q5)) {
+    setRiskLevel("middle");
+  } else if ((!q1 && !q2 && q3 && !q4 && !q5) ||
+    (!q1 && !q2 && !q3 && !q4 && !q5)) {
+    setRiskLevel("low");
+  }
+
+  resultsArr.forEach((result, index) => {
+    console.log(`q${index + 1}: ${result}`);
+  });
+};
+
 
   return (
     <div className="question page">
